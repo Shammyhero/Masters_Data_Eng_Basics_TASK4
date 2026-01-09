@@ -8,10 +8,6 @@ This project implements a local PySpark data pipeline that cleans restaurant dat
 project/
  ├── src/
  │    └── job.py            # Main PySpark ETL job (includes geocoding & geohash logic)
- ├── tests/
- │    ├── test_geohash.py   # Unit tests for geohashing
- │    ├── test_join.py      # Integration tests for Spark logic
- │    └── test_geocoding.py # Tests for API client (mocked)
  ├── data/
  │    ├── restaurants/      # Input CSV files
  │    └── weather/          # Input Parquet files (partitioned)
@@ -53,10 +49,4 @@ The job will:
 3.  Generate geohashes for both datasets.
 4.  Deduplicate weather data (latest date per geohash).
 5.  Join datasets on geohash.
-6.  Write the result to `output/enriched_data` (Parquet format).
-
-### 6. Run Tests
-Run the test suite to verify logic (mocking the API):
-```bash
-python3 -m pytest tests/
-```
+6.  Write the result to `output/enriched_data` in Parquet format, partitioned by `country`.
