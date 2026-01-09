@@ -50,3 +50,9 @@ The job will:
 4.  Deduplicate weather data (latest date per geohash).
 5.  Join datasets on geohash.
 6.  Write the result to `output/enriched_data` in Parquet format, partitioned by `country`.
+
+
+### 6. Output of the job:
+<img width="1396" height="689" alt="Screenshot 2026-01-10 at 01 04 17" src="https://github.com/user-attachments/assets/43ebec5e-7a3c-4262-890d-e62f06e37f59" />
+
+
