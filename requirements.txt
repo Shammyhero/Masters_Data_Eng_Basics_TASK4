@@ -1,0 +1,5 @@
+pyspark
+pygeohash
+requests
+python-dotenv
+pytest
